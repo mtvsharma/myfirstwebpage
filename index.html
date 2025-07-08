@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .contact-option {
+            display: none;
+            margin-top: 20px;
+        }
+        #name {
+            font-size: 30px;
+            cursor: pointer;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="name">Click Here: Your Name</h1>
+    <div id="contactOptions" class="contact-option">
+        <button onclick="window.location.href='mailto:mtvsharma@gmail.com'">Email me</button>
+        <button onclick="window.location.href='https://wa.me/919960658058'">WhatsApp me</button>
+    </div>
+
+    <script>
+        // Show contact options when the name is clicked
+        document.getElementById("name").addEventListener("click", function() {
+            var options = document.getElementById("contactOptions");
+            options.style.display = options.style.display === "block" ? "none" : "block";
+        });
+    </script>
+</body>
+</html>
